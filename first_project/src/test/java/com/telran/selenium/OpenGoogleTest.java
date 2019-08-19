@@ -13,10 +13,11 @@ public void setUp() throws InterruptedException {
     driver = new ChromeDriver();
     driver.get("https://www.google.com");
     //driver.navigate().to() the same;
+
+        driver.findElement(By.name("q")).sendKeys("java");
         Thread.sleep(7000);
         driver.quit();//to close google
 
-        driver.findElement(By.name("q")).sendKeys("java");
 
  }
 
